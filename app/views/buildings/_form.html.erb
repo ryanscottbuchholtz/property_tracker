@@ -9,6 +9,7 @@
     <%= f.text_area :description, label: false, placeholder: 'Description', cols: '36', rows: '5' %>
 
 <br>
+    <%= f.association :owner, label: false, collection: Owner.all.order('last_name'), label_method: :full_name, value_method: :id, prompt: 'Owner' %>
 <br>
 
     <%= f.button :submit, "Record this building" %>

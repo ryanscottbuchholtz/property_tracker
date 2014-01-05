@@ -16,4 +16,9 @@ describe Owner do
   
   end
 
+ describe 'associations' do
+  
+    it { should have_many(:buildings) }
+
+  end 
 end
