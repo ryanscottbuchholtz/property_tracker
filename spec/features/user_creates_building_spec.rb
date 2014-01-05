@@ -24,7 +24,7 @@ describe 'a real estate associate records a new building', %q{
       fill_in 'Street Address', with: building.street_address
       fill_in 'City', with: building.city
       select building.state.name, from: 'building_state_id'
-      fill_in 'Postal Code', with: building.postal_code
+      fill_in 'ZIP', with: building.postal_code
 
       click_on 'Record this building'
 
@@ -56,7 +56,7 @@ describe 'a real estate associate records a new building', %q{
       fill_in 'Street Address', with: building.street_address
       fill_in 'City', with: building.city
       select building.state.name, from: 'building_state_id'
-      fill_in 'Postal Code', with: 1234
+      fill_in 'ZIP', with: 1234
 
       click_on 'Record this building'
 
@@ -73,7 +73,7 @@ describe 'a real estate associate records a new building', %q{
       fill_in 'Street Address', with: building.street_address
       fill_in 'City', with: building.city
       select building.state.name, from: 'building_state_id'
-      fill_in 'Postal Code', with: 'abcde'
+      fill_in 'ZIP', with: 'abcde'
 
       click_on 'Record this building'
 

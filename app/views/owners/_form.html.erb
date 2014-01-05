@@ -1,0 +1,17 @@
+<%= simple_form_for(owner) do |f| %>
+
+  <%= f.error_notification %>
+
+    <%= f.input :first_name, label: false, placeholder: 'First Name', input_html: {size: 50} %>
+    <%= f.input :last_name, label: false, placeholder: 'Last Name', input_html: {size: 50} %>
+    <%= f.input :email_address, label: false, placeholder: 'E-mail Address', input_html: {size: 50} %>
+    <%= f.input :company, label: false, placeholder: 'Company(optional)', input_html: {size: 50}%>
+
+<br>
+<br>
+
+    <%= f.button :submit, "Add this Owner" %>
+
+<br>
+
+<% end %>
