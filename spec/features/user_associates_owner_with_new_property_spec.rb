@@ -17,7 +17,6 @@ describe 'a real estate associate correlates an owner with a building', %q{
       owner = FactoryGirl.create(:owner)
 
       visit new_building_path
-      save_and_open_page
                
       fill_in 'Street Address', with: building.street_address
       fill_in 'City', with: building.city
