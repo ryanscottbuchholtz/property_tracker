@@ -1,0 +1,18 @@
+<%= simple_form_for(building) do |f| %>
+
+  <%= f.error_notification %>
+
+    <%= f.input :street_address, label: false, placeholder: 'Street Address', input_html: {size: 50} %>
+    <%= f.input :city, label: false, placeholder: 'City', input_html: {size: 50} %>
+    <%= f.association :state, label: false, collection: State.all.order('name'), label_method: :name, value_method: :id, prompt: 'State' %>
+    <%= f.input :postal_code, label: false, placeholder: 'ZIP', input_html: {size: 15} %>
+    <%= f.text_area :description, label: false, placeholder: 'Description', cols: '36', rows: '5' %>
+
+<br>
+<br>
+
+    <%= f.button :submit, "Record this building" %>
+
+<br>
+
+<% end %>
